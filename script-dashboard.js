@@ -13,48 +13,53 @@ function loadDashboard() {
 
   const progress = student.progress;
 
-  // Al-Fatihah Test 1
+//Al-Fatihah Word 1
+document.getElementById("word1Card").innerHTML =
+    `<h4>Understanding the words - Al-Fatihah</h4>
+    ${progress.word1 === 100 ? '✅ Completed' : '❌ Not Completed'}
+    <br><button onclick='window.location="word1.html"'>Start</button>`;
+//Al-Fatihah Memory 1
+document.getElementById("memory1Card").innerHTML =
+    `<h4>Memorising the words - Al-Fatihah</h4>
+    ${progress.memory1 === 100 ? '✅ Completed' : progress.word1 === 100 ? '❌ Not Completed' : '🔒 Locked'}
+    <br><button ${progress.word1 === 100 ? '' : 'disabled'} onclick='window.location="memory1.html"'>Start</button>`;
+// Al-Fatihah Test 1
     document.getElementById("test1Card").innerHTML =
-        `<h4>Understanding the words - Al-Fatihah</h4>
-        ${progress.test1 === 100 ? '✅ Passed' : '❌ Not Passed'}
-        <br><button onclick='window.location="test1.html"'>Start</button>`;
-// Al-Fatihah Test 2
-    document.getElementById("test2Card").innerHTML =
-        `<h4>Memorising the words - Al-Fatihah</h4>
-        ${progress.test2 === 100 ? '✅ Passed' : progress.test1 === 100 ? '❌ Not Passed' : '🔒 Locked'}
-        <br><button ${progress.test1 === 100 ? '' : 'disabled'} onclick='window.location="test2.html"'>Start</button>`;
-// Al-Fatihah Test 3
-    document.getElementById("test3Card").innerHTML =
         `<h4>Test - Al-Fatihah</h4>
-        ${progress.test3 === 100 ? '✅ Passed' : progress.test2 === 100 ? '❌ Not Passed' : '🔒 Locked'}
-        <br><button ${progress.test2 === 100 ? '' : 'disabled'} onclick='window.location="test3.html"'>Start</button>`;
-// Al-Baqarah Test 4
-    document.getElementById("test4Card").innerHTML =
-        `<h4>Understanding the words - Al-Baqarah</h4>
-        ${progress.test4 === 100 ? '✅ Passed' : progress.test3 === 100 ? '❌ Not Passed' : '🔒 Locked'}
-        <br><button ${progress.test3 === 100 ? '' : 'disabled'} onclick='window.location="test4.html"'>Start</button>`;
-// Al-Baqarah Test 5
-    document.getElementById("test5Card").innerHTML =
-        `<h4>Memorising the words - Al-Baqarah</h4>
-        ${progress.test5 === 100 ? '✅ Passed' : progress.test4 === 100 ? '❌ Not Passed' : '🔒 Locked'}
-        <br><button ${progress.test4 === 100 ? '' : 'disabled'} onclick='window.location="test5.html"'>Start</button>`;
-// Al-Baqarah Test 6
-    document.getElementById("test6Card").innerHTML =
-        `<h4>Test - Al-Baqarah</h4>
-        ${progress.test6 === 100 ? '✅ Passed' : progress.test5 === 100 ? '❌ Not Passed' : '🔒 Locked'}
-        <br><button ${progress.test5 === 100 ? '' : 'disabled'} onclick='window.location="test6.html"'>Start</button>`;
-}
+        ${progress.test1 === 100 ? '✅ Passed' : progress.memory1 === 100 ? '❌ Not Passed' : '🔒 Locked'}
+        <br><button ${progress.memory1 === 100 ? '' : 'disabled'} onclick='window.location="test1.html"'>Start</button>`;
 
-document.querySelectorAll('.filter-buttons button').forEach(button => {
-        button.addEventListener('click', () => {
-            const category = button.dataset.category;
-            document.querySelectorAll('.recipe-hero').forEach(card => {
-                if (category === 'all' || card.dataset.categories.includes(category)) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
-            }
-            );
-        });
-    });
+// Al-Baqarah Word 2
+    document.getElementById("word2Card").innerHTML =
+        `<h4>Understanding the words - Al-Baqarah</h4>
+        ${progress.word2 === 100 ? '✅ Completed' : progress.test1 === 100 ? '❌ Not Completed' : '🔒 Locked'}
+        <br><button ${progress.test1 === 100 ? '' : 'disabled'} onclick='window.location="word2.html"'>Start</button>`;
+// Al-Baqarah Memory 2
+    document.getElementById("memory2Card").innerHTML =
+        `<h4>Memorising the words - Al-Baqarah</h4>
+        ${progress.memory2 === 100 ? '✅ Completed' : progress.word2 === 100 ? '❌ Not Completed' : '🔒 Locked'}
+        <br><button ${progress.word2 === 100 ? '' : 'disabled'} onclick='window.location="memory2.html"'>Start</button>`;
+// Al-Baqarah Test 2
+    document.getElementById("test2Card").innerHTML =
+        `<h4>Test - Al-Baqarah</h4>
+        ${progress.test2 === 100 ? '✅ Passed' : progress.memory2 === 100 ? '❌ Not Passed' : '🔒 Locked'}
+        <br><button ${progress.memory2 === 100 ? '' : 'disabled'} onclick='window.location="test2.html"'>Start</button>`;
+
+// Al-Imran Word 3
+    document.getElementById("word3Card").innerHTML =
+        `<h4>Understanding the words - Al-Imran</h4>
+        ${progress.word3 === 100 ? '✅ Completed' : progress.test2 === 100 ? '❌ Not Completed' : '🔒 Locked'}
+        <br><button ${progress.test2 === 100 ? '' : 'disabled'} onclick='window.location="word3.html"'>Start</button>`;
+// Al-Imran Memory 3
+    document.getElementById("memory3Card").innerHTML =
+        `<h4>Memorising the words - Al-Imran</h4>
+        ${progress.memory3 === 100 ? '✅ Completed' : progress.word3 === 100 ? '❌ Not Completed' : '🔒 Locked'}
+        <br><button ${progress.word3 === 100 ? '' : 'disabled'} onclick='window.location="memory3.html"'>Start</button>`;
+// Al-Imran Test 3
+    document.getElementById("test3Card").innerHTML =
+        `<h4>Test - Al-Imran</h4>
+        ${progress.test3 === 100 ? '✅ Passed' : progress.memory3 === 100 ? '❌ Not Passed' : '🔒 Locked'}
+        <br><button ${progress.memory3 === 100 ? '' : 'disabled'} onclick='window.location="test3.html"'>Start</button>`;
+
+
+}
