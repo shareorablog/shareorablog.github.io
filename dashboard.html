@@ -9,20 +9,16 @@
     <header class="intro">
         <h1>Welcome, <span id="studentName"></span></h1>
         <p>Before we get started. Here some starter points for us.</p>
-        <nav class="points">
-            <ul>
-                <a href="translit.html"><li>Learn more about translit</li></a>
-                <a href="tajwid"><li>Learn Tajwid</li></a>
-                <a href="articulation-points"><li>Learn the points of articulation for Arabic letters</li></a>
-                <a href="sajdah"><li>Verses in Al-Quran where prostaration (sajdah) is specificically prescribed or recommended.</li></a>
-                <a href="symbols"><li>Marks or symbols used in Al-Quran to indicate how to pronounce and recite the tect with proper tajweed.</li></a>
-                <a href="surah"><li>Name of the surahs in Al-Quran.</li></a>
-
-            </ul>
-        </nav>
-
+        <div class="categories">
+            <a class="hyperlink" href="translit.html"><button class="category-btn">Learn more about translit</button></a>
+            <a class="hyperlink" href="tajwid.html"><button class="category-btn">Learn more on tajwid</button></a>
+            <a class="hyperlink" href="points.html"><button class="category-btn">Learn the points of articulation for Arabic letters</button></a>
+            <a class="hyperlink" href="sajdah.html"><button class="category-btn">Verses in Al-Quran where prostaration (sajdah) is specifically prescribed or recommended</button></a>
+            <a class="hyperlink" href="symbols.html"><button class="category-btn">MArks or symbols used in Al-Quran to indicate how to pronouce and recite the text with proper tajwid</button></a>
+            <a class="hyperlink" href="surahs.html"><button class="category-btn">Name of surahs in Al-Quran</button></a>
+        </div>
     </header>
-
+<main class="dashboard">
   <div class="unit">
   <h3>Al-Fatihah</h3>
   <div class="card" id="test1Card"></div>
@@ -35,6 +31,7 @@
   <div class="card" id="test5Card"></div>
   <div class="card" id="test6card"></div>
   </div>
+</main>
 
   <script src="script-dashboard.js"></script>
   <script>
