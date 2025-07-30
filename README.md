@@ -60,7 +60,7 @@ If you're passionate about Qur'an learning, you can:
 
 ## 📩 Contact
 
-Reach out via the blog’s contact section or email [your-email@example.com] (replace with your actual contact).
+Reach out via the blog’s contact section or email [shareorablog@gmail.com].
 
 ---
 
