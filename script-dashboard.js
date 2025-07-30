@@ -44,3 +44,17 @@ function loadDashboard() {
         ${progress.test6 === 100 ? '✅ Passed' : progress.test5 === 100 ? '❌ Not Passed' : '🔒 Locked'}
         <br><button ${progress.test5 === 100 ? '' : 'disabled'} onclick='window.location="test6.html"'>Start</button>`;
 }
+
+document.querySelectorAll('.filter-buttons button').forEach(button => {
+        button.addEventListener('click', () => {
+            const category = button.dataset.category;
+            document.querySelectorAll('.recipe-hero').forEach(card => {
+                if (category === 'all' || card.dataset.categories.includes(category)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            }
+            );
+        });
+    });
