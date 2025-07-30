@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Arabic Test Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <section class="messages-box">
+        <div class="messagebox">
+            <h2>Welcome to ShareOra</h2>
+            <p>Before we get started, please enter your name to begin.</p>
+            <p>Once you log in, you can access your dashboard and start learning locally.</p>
+            <p>Make sure to complete the tests in order to get your certificate of completion.</p>
+            <p>Remember, you can always return to the dashboard to review your progress.</p>
+            <p>Feel free to explore the resources available on the site.</p>
+            <p>Sharing is caring. Let's learn together!</p>
+            <p>For any issues, please contact <a href="support.html">support</a>.</p>
+            <p>Happy learning!</p>
+        </div>
+    </section>
+    <section class="login-section">
+    <div class="panel">
+        <h2>Student Login</h2>
+        <input type="text" id="studentName" placeholder="Enter your name" />
+        <p>Enter your full name for certification.</p><br>
+        <button onclick="startApp()">Start</button>
+    </div>
+    </section>
+
+    <footer class="copyright">
+        <div class="copyright">
+            <p>&copy ShareOra 2025 - Understanding Al-Quran Together. All rights reserved.</p>
+            <p>Content based on authentic Islamic sources.</p>
+            <a href="privacy-policy.html">Privacy Policy</a> | 
+            <a href="/content-guidelines">Content Guidelines</a>
+        </div>
+    </footer>
+
+  <script>
+    function startApp() {
+      const name = document.getElementById('studentName').value.trim();
+      if (!name) return alert("Enter your name!");
+      const studentData = {
+        name: name,
+        progress: {
+          test1: null,
+          test2: null,
+          exam: null
+        }
+      };
+      localStorage.setItem('studentData', JSON.stringify(studentData));
+      window.location.href = "dashboard.html";
+    }
+  </script>
+</body>
+</html>
