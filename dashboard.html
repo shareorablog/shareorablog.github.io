@@ -1,38 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Dashboard</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>ShareOra Blogs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style-dashboard.css">
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-5P3JHPHD');
+    </script>
+    <!-- End Google Tag Manager -->
 </head>
 <body>
+<!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLMSQ9RM52"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-PLMSQ9RM52');
+    </script>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5P3JHPHD"
+    <div class="disclaimer">
+            height="0" width="0" style="display:none;visibility:hidden">
+        </iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="disclaimer">
+        <p><strong>Important:</strong> These reflections are personal understandings. 
+        For authoritative interpretation, consult qualified scholars and classical tafsir.</p>
+    </div>
+    <header class="site-header">
+        <div class="logo">
+            <h1>ShareOra</h1>
+        </div>    
     <header class="intro">
         <h1>Welcome, <span id="studentName"></span></h1>
         <p>Before we get started. Here some starter points for us.</p>
         <div class="categories">
-            <a class="hyperlink" href="translit.html"><button class="category-btn">Learn more about translit</button></a>
-            <a class="hyperlink" href="tajwid.html"><button class="category-btn">Learn more on tajwid</button></a>
-            <a class="hyperlink" href="points.html"><button class="category-btn">Learn the points of articulation for Arabic letters</button></a>
-            <a class="hyperlink" href="sajdah.html"><button class="category-btn">Verses in Al-Quran where prostaration (sajdah) is specifically prescribed or recommended</button></a>
-            <a class="hyperlink" href="symbols.html"><button class="category-btn">MArks or symbols used in Al-Quran to indicate how to pronouce and recite the text with proper tajwid</button></a>
-            <a class="hyperlink" href="surahs.html"><button class="category-btn">Name of surahs in Al-Quran</button></a>
+            <a class="hyperlink" href="translit.html"><button class="category-btn"><li>Learn more about translit</li></button></a>
+            <a class="hyperlink" href="tajwid.html"><button class="category-btn"><li>Learn more on tajwid</li></button></a>
+            <a class="hyperlink" href="points.html"><button class="category-btn"><li>Learn the points of articulation for Arabic letters</li></button></a>
+            <a class="hyperlink" href="sajdah.html"><button class="category-btn"><li>Verses in Al-Quran where prostaration (sajdah) is specifically prescribed or recommended</li></button></a>
+            <a class="hyperlink" href="symbols.html"><button class="category-btn"><li>Marks or symbols used in Al-Quran to indicate how to pronouce and recite the text with proper tajwid</li></button></a>
+            <a class="hyperlink" href="surahs.html"><button class="category-btn"><li>Name of surahs in Al-Quran</li></button></a>
         </div>
     </header>
-<main class="dashboard">
-  <div class="unit">
-  <h3>Al-Fatihah</h3>
-  <div class="card" id="test1Card"></div>
-  <div class="card" id="test2Card"></div>
-  <div class="card" id="test3Card"></div>
-  </div>
-  <div class="unit">
-  <h3>Al-Baqarah</h3>
-  <div class="card" id="test4Card"></div>
-  <div class="card" id="test5Card"></div>
-  <div class="card" id="test6card"></div>
-  </div>
-</main>
+<div class="dashboard">
+    <div class="unit">
+    <h3>Al-Fatihah</h3>
+    <div class="unit-cards">
+        <div class="card" id="word1Card"></div>
+        <div class="card" id="memory1Card"></div>
+        <div class="card" id="test1Card"></div>
+    </div>
+    </div>
+    <div class="unit">
+    <h3>Al-Baqarah</h3>
+    <div class="unit-cards">
+        <div class="card" id="word2Card"></div>
+        <div class="card" id="memory2Card"></div>
+        <div class="card" id="test2Card"></div>
+    </div>
+    </div>
+    <div class="unit">
+    <h3>Al-Imran</h3>
+    <div class="unit-cards">
+        <div class="card" id="word3Card"></div>
+        <div class="card" id="memory3Card"></div>
+        <div class="card" id="test3Card"></div>
+    </div>
+</div>
 
+  <footer class="site-footer">
+      <div class="copyright">
+          <p>&copy ShareOra 2025 - Understanding Al-Quran Together. All rights reserved.</p>
+          <p>Content based on authentic Islamic sources.</p>
+          <a href="privacy-policy.html">Privacy Policy</a> | 
+          <a href="/content-guidelines">Content Guidelines</a>
+      </div>
+  </footer>
+      
   <script src="script-dashboard.js"></script>
   <script>
     loadDashboard();
