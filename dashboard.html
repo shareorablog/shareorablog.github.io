@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header class="intro">
+        <h1>Welcome, <span id="studentName"></span></h1>
+        <p>Before we get started. Here some starter points for us.</p>
+        <nav class="points">
+            <ul>
+                <a href="translit.html"><li>Learn more about translit</li></a>
+                <a href="tajwid"><li>Learn Tajwid</li></a>
+                <a href="articulation-points"><li>Learn the points of articulation for Arabic letters</li></a>
+                <a href="sajdah"><li>Verses in Al-Quran where prostaration (sajdah) is specificically prescribed or recommended.</li></a>
+                <a href="symbols"><li>Marks or symbols used in Al-Quran to indicate how to pronounce and recite the tect with proper tajweed.</li></a>
+                <a href="surah"><li>Name of the surahs in Al-Quran.</li></a>
+
+            </ul>
+        </nav>
+
+    </header>
+
+  <div class="unit">
+  <h3>Al-Fatihah</h3>
+  <div class="card" id="test1Card"></div>
+  <div class="card" id="test2Card"></div>
+  <div class="card" id="test3Card"></div>
+  </div>
+  <div class="unit">
+  <h3>Al-Baqarah</h3>
+  <div class="card" id="test4Card"></div>
+  <div class="card" id="test5Card"></div>
+  <div class="card" id="test6card"></div>
+  </div>
+
+  <script src="script-dashboard.js"></script>
+  <script>
+    loadDashboard();
+  </script>
+</body>
+</html>
