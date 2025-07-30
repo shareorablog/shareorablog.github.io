@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Guidelines - Quran Reflections</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2c6e49;
+            --primary-light: #4c956c;
+            --secondary: #d68c45;
+            --light: #fefee3;
+            --dark: #1d3557;
+            --text: #333;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        header {
+            background: linear-gradient(120deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: "";
+            position: absolute;
+            top: -50px;
+            left: -50px;
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+        }
+        
+        header::after {
+            content: "";
+            position: absolute;
+            bottom: -30px;
+            right: -30px;
+            width: 150px;
+            height: 150px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+        }
+        
+        .logo {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            opacity: 0.9;
+        }
+        
+        .quran-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 3rem;
+            opacity: 0.2;
+            z-index: 1;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .intro {
+            background: #f0f7ee;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border-left: 5px solid var(--secondary);
+        }
+        
+        h2 {
+            color: var(--primary);
+            margin: 25px 0 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e9ecef;
+            position: relative;
+        }
+        
+        h2::after {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 70px;
+            height: 2px;
+            background: var(--secondary);
+        }
+        
+        .guideline-card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid var(--primary-light);
+            transition: transform 0.3s ease;
+        }
+        
+        .guideline-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .guideline-card h3 {
+            display: flex;
+            align-items: center;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .guideline-card h3 i {
+            margin-right: 12px;
+            background: rgba(44, 110, 73, 0.1);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+        }
+        
+        ul {
+            padding-left: 25px;
+            margin: 15px 0;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+        
+        .highlight {
+            background: #fefee3;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid var(--secondary);
+        }
+        
+        .verse {
+            font-family: 'Georgia', serif;
+            font-size: 1.1rem;
+            font-style: italic;
+            color: var(--dark);
+            margin: 20px 0;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .verse::before, .verse::after {
+            content: "";
+            font-size: 2rem;
+            color: var(--secondary);
+            vertical-align: super;
+            line-height: 0;
+        }
+        
+        .source {
+            text-align: right;
+            font-size: 0.9rem;
+            color: var(--primary-light);
+            margin-top: 5px;
+        }
+        
+        .example {
+            background: #e9f5f1;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid var(--primary);
+        }
+        
+        .example-title {
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        .bad-example {
+            background: #fef0f0;
+            border-left: 4px solid #e63946;
+        }
+        
+        .bad-example .example-title {
+            color: #e63946;
+        }
+        
+        .footnote {
+            font-size: 0.9rem;
+            color: #6c757d;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e9ecef;
+        }
+        
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 25px;
+            font-size: 0.9rem;
+        }
+        
+        .footer-nav {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+        
+        .footer-nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+        
+        .footer-nav a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                padding: 25px 15px;
+            }
+            
+            header {
+                padding: 30px 15px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="quran-icon">
+                <i class="fas fa-book-quran"></i>
+            </div>
+            <div class="logo">
+                <i class="fas fa-book-open"></i>
+            </div>
+            <h1>Content Guidelines</h1>
+            <p class="subtitle">Principles for presenting Quranic content with integrity and reverence</p>
+        </header>
+        
+        <div class="content">
+            <div class="intro">
+                <p>These guidelines ensure our content honors the sacred nature of the Quran while providing valuable insights. They are based on Islamic principles of knowledge sharing and respect for divine revelation.</p>
+            </div>
+            
+            <h2>Core Principles</h2>
+            
+            <div class="guideline-card">
+                <h3><i class="fas fa-star"></i> Reverence for the Quran</h3>
+                <ul>
+                    <li>Always treat Quranic text with the highest respect</li>
+                    <li>Ensure cleanliness before handling Quranic content</li>
+                    <li>Use honorifics when referring to Allah and His revelation</li>
+                </ul>
+            </div>
+            
+            <div class="guideline-card">
+                <h3><i class="fas fa-scale-balanced"></i> Context Preservation</h3>
+                <ul>
+                    <li>Never present verses in isolation without context</li>
+                    <li>Include revelation circumstances (Asbab al-Nuzul) where relevant</li>
+                    <li>Distinguish Meccan and Medinan revelations</li>
+                </ul>
+            </div>
+            
+            <div class="guideline-card">
+                <h3><i class="fas fa-user-graduate"></i> Scholarly Integrity</h3>
+                <ul>
+                    <li>Attribute interpretations to recognized scholars</li>
+                    <li>Cite classical tafsir sources for traditional explanations</li>
+                    <li>Distinguish between scholarly consensus and personal opinion</li>
+                </ul>
+            </div>
+            
+            <div class="highlight">
+                <p>"And recite the Quran with measured recitation." (Quran 73:4)</p>
+                <p class="source">Surah Al-Muzzammil, Ayah 4</p>
+            </div>
+            
+            <h2>Content Creation Standards</h2>
+            
+            <div class="guideline-card">
+                <h3><i class="fas fa-book"></i> Quranic Text Presentation</h3>
+                <ul>
+                    <li>Always include Surah and Ayah numbers</li>
+                    <li>Provide recognized translation with translator attribution</li>
+                    <li>Visually distinguish Quranic text from commentary</li>
+                    <li>Use proper Arabic typography when including original text</li>
+                </ul>
+                
+                <div class="example">
+                    <div class="example-title">Recommended Format:</div>
+                    <div class="verse">"And We have certainly made the Quran easy for remembrance, so is there any who will remember?"</div>
+                    <div class="source">(Quran 54:17 - Translation: Saheeh International)</div>
+                </div>
+                
+                <div class="bad-example example">
+                    <div class="example-title">Avoid:</div>
+                    <p>"The Quran is easy to understand" (some verse)</p>
+                </div>
+            </div>
+            
+            <div class="guideline-card">
+                <h3><i class="fas fa-comment"></i> Personal Reflections</h3>
+                <ul>
+                    <li>Clearly label personal insights as "Reflections"</li>
+                    <li>Preface with disclaimer: "These are personal understandings"</li>
+                    <li>Never present personal views as authoritative interpretation</li>
+                    <li>Encourage readers to verify with scholars</li>
+                </ul>
+            </div>
+            
+            <div class="guideline-card">
+                <h3><i class="fas fa-handshake"></i> Sensitive Topics</h3>
+                <ul>
+                    <li>Exercise special care with verses about:
+                        <ul>
+                            <li>Legal rulings (Ahkam)</li>
+                            <li>Other faith communities</li>
+                            <li>Historical conflicts</li>
+                            <li>Gender relations</li>
+                        </ul>
+                    </li>
+                    <li>Present multiple scholarly perspectives where they exist</li>
+                    <li>Include historical context for challenging verses</li>
+                </ul>
+            </div>
+            
+            <h2>Community Engagement</h2>
+            
+            <div class="guideline-card">
+                <h3><i class="fas fa-users"></i> Discussion Guidelines</h3>
+                <ul>
+                    <li>Maintain respectful dialogue even in disagreement</li>
+                    <li>Prohibit derogatory remarks about scholars or schools of thought</li>
+                    <li>Remove content that mocks Quranic verses or Islamic practices</li>
+                    <li>Encourage evidence-based discussions with references</li>
+                </ul>
+            </div>
+            
+            <div class="guideline-card">
+                <h3><i class="fas fa-share-alt"></i> Content Sharing</h3>
+                <ul>
+                    <li>Always share verses with full context</li>
+                    <li>Never modify Quranic text to fit personal arguments</li>
+                    <li>Attribute content to original source when sharing</li>
+                    <li>Respect copyrights on translations and tafsir works</li>
+                </ul>
+            </div>
+            
+            <div class="highlight">
+                <p>"Invite to the way of your Lord with wisdom and good instruction, and argue with them in a way that is best."</p>
+                <p class="source">(Quran 16:125)</p>
+            </div>
+            
+            <div class="footnote">
+                <p>These guidelines are reviewed annually by our advisory board of Islamic scholars. Last updated: July 25, 2025</p>
+            </div>
+        </div>
+        
+        <footer>
+            <div class="footer-nav">
+                <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                <a href="blog.html"><i class="fas fa-book-blog"></i> Blog</a>
+                <a href="about.html"><i class="fas fa-user"></i> About</a>
+                <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="privacy-policy.html"><i class="fas fa-lock"></i> Privacy Policy</a>
+            </div>
+            <p>&copy ShareOra 2025 | "And remind, for indeed, the reminder benefits the believers." (Quran 51:55)</p>
+        </footer>
+    </div>
+</body>
+</html>
